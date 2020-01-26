@@ -1,3 +1,5 @@
+/* GREEN: #0d7051 */
+
 @font-face {
   font-family: "KaushanScript";
   src: url(../fonts/kaushan/KaushanScript-Regular.otf);
@@ -86,14 +88,48 @@ flex-wrap:wrap;
 }
 
 #our-brands {
-  border: #cacaca 1px solid;
+  border: #dfd3c7 1px solid;
   border-radius: 20px;
-  text-align: center;
   margin: 15px;
-  padding: 10px;
+  padding: 20px 30px;
   margin-bottom: 50px;
+  font-weight: bold;
+  color: #bcbcbc;
+  line-height: 20px;
 }
 
-.our-labels {
 
+.our-team {
+  font-size: 18px;
+  color: #4a4a4a
+}
+
+.quote-like {
+  font-weight: bold;
+  text-align: center;
+  color: #2a2a2a;
+}
+
+.not-only-about {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.not-only-about p {
+  color: #3a3a3a;
+}
+
+.section--team-bg {
+  background-color: #eaeaea;
+}
+
+.section-title {
+    font-family: "KaushanScript-Regular",sans-serif;
+    font-size: 52px;
+    color: #67492c;
+}
+
+.contact-title {
+  color: #eaeaea;
+  font-weight: 700;
 }
