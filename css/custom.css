@@ -78,8 +78,9 @@ flex-wrap:wrap;
   margin-top: 20px;
   font-size: 28px;
   font-family: "Open Sans",sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 34px;
+  color: #e79e84;
 }
 
 #productos  h3 {
@@ -120,7 +121,7 @@ flex-wrap:wrap;
 }
 
 .section--team-bg {
-  background-color: #eaeaea;
+  background-color: #f6f0df;
 }
 
 .section-title {
@@ -132,4 +133,9 @@ flex-wrap:wrap;
 .contact-title {
   color: #eaeaea;
   font-weight: 700;
+}
+
+.certs {
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
