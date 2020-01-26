@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+	<title>ALCEMA</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui" />
+
+	<meta name="theme-color" content="#0d7051" />
+	<meta name="msapplication-navbutton-color" content="#0d7051" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="#0d7051" />
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+	<!-- Critical styles
+	================================================== -->
+	<link rel="stylesheet" href="css/critical.css" type="text/css">
+
+	<!-- Load google font
+	================================================== -->
+	<script type="text/javascript">
+	WebFontConfig = {
+		google: { families: [ 'Open+Sans:300,400,500,600,700,800', 'Raleway:100,400,400i,500,500i,700,700i,900'] }
+	};
+	(function() {
+		var wf = document.createElement('script');
+		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+		wf.type = 'text/javascript';
+		wf.async = 'true';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(wf, s);
+	})();
+	</script>
+
+	<!-- Load other scripts
+	================================================== -->
+	<script type="text/javascript">
+	var _html = document.documentElement,
+	isTouch = (('ontouchstart' in _html) || (navigator.msMaxTouchPoints > 0) || (navigator.maxTouchPoints));
+
+	_html.className = _html.className.replace("no-js","js");
+	_html.classList.add( isTouch ? "touch" : "no-touch");
+	</script>
+	<script type="text/javascript" src="js/device.min.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<!-- start header -->
+		<header id="top-bar" class="top-bar top-bar--style-1">
+			<div class="top-bar__bg" style="background-color: #24292c;"></div>
+
+			<div class="container-fluid">
+				<div class="row align-items-center justify-content-between no-gutters">
+
+					<a class="top-bar__logo site-logo" href="index.html">
+						<div class="" STYLE="padding:20px 0px;">
+							<img class="img-fluid" src="img/site_logo.png" alt="Since 1920." />
+						</div>
+					</a>
+
+					<!--
+
+					// Mobile Menu Button
+
+					<a id="top-bar__navigation-toggle" class="top-bar__navigation-toggler top-bar__navigation-toggler--dark" href="javascript:void(0);"><span></span></a> -->
+					<div class="sticky-btn">
+						<a class="custom-btn custom-btn--small custom-btn--contact-us" style="" href="#footer">CONTACT US</a>
+					</div>
+
+					<div id="top-bar__inner" class="top-bar__inner">
+						<div>
+							<nav id="top-bar__navigation" class="top-bar__navigation navigation" role="navigation">
+								<ul>
+									<li class="">
+										<a href="#history">OUR HISTORY</a>
+									</li>
+
+									<li>
+										<a href="#products">OUR PRODUCTS</a>
+									</li>
+
+									<li>
+										<a href="#why-organic">WHY ORGANIC?</a>
+									</li>
+
+									<li>
+										<a href="#our-team">OUR TEAM</a>
+									</li>
+
+									<li>
+										<a href="#gallery">GALLERY</a>
+									</li>
+
+									<li class="li-btn">
+										<a class="custom-btn custom-btn--small custom-btn--contact-us" href="#footer">CONTACT US</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</header>
+		<!-- end header -->
+
+		<!-- start start screen -->
+		<div id="start-screen" class="scroll-discover-container" data-scroll-discover="true">
+			<div class="start-screen-bg text-white slogan-holder" style="background: url(img/hero-image.jpg) center center; background-color: rgba(0, 151, 19, 0.3);">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-12">
+							<p class="__slogan">We grow healthy and quality products.</p>
+							<p class="__slogan __sub">Socially and highly environmentally committed.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<span class="scroll-discover"></span>
+		</div>
+	</div>
+	<!-- end start screen -->
+
+	<!-- start main -->
+	<main role="main">
+		<!-- Common styles
+		================================================== -->
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="css/custom.css" type="text/css">
+
+		<!-- Load lazyLoad scripts
+		================================================== -->
+		<script>
+		(function(w, d){
+			var m = d.getElementsByTagName('main')[0],
+			s = d.createElement("script"),
+			v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0",
+			o = {
+				elements_selector: ".lazy",
+				data_src: 'src',
+				data_srcset: 'srcset',
+				threshold: 500,
+				callback_enter: function (element) {
+
+				},
+				callback_load: function (element) {
+					element.removeAttribute('data-src')
+
+					oTimeout = setTimeout(function ()
+					{
+						clearTimeout(oTimeout);
+
+						AOS.refresh();
+					}, 1000);
+				},
+				callback_set: function (element) {
+
+				},
+				callback_error: function(element) {
+					element.src = "https://placeholdit.imgix.net/~text?txtsize=21&txt=Image%20not%20load&w=200&h=200";
+				}
+			};
+			s.type = 'text/javascript';
+			s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
+			s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
+			m.appendChild(s);
+			// m.insertBefore(s, m.firstChild);
+			w.lazyLoadOptions = o;
+		}(window, document));
+		</script>
+
+		<!-- start section -->
+		<section id="history" class="section">
+			<div class="d-none d-lg-block">
+				<img id="bg-img-1" class="img-fluid lazy" src="img/blank.gif" data-src="img/alcema-watermark.png" alt="ALCEMA" />
+				<style type="text/css">
+				#bg-img-1
+				{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					-webkit-transform: translate(-50%,-50%);
+					-ms-transform: translate(-50%,-50%);
+					transform: translate(-50%,-50%);
+				}
+				</style>
+			</div>
+
+			<!-- start section -->
+
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-12 col-lg-2">
+						<div>
+							<div class="section-heading">
+								<h2 class="__title center-xs"><span>OUR</span> HISTORY</h2>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-12 my-3 d-lg-none"></div>
+
+					<div class="col-12 col-lg-6 history">
+						<div>
+							<p><span style="font-weight:bolder; color:#0d7051;">In 1920</span> our farm was established in Huatabampo, Sonora, Mexico. When a Spanish emigrant, Eugenio Larrinaga found perfect land for vegetable farming.</p>
+							<p>His son Cesar Larrinaga continue farming the same land years after and began the remarkable trajectory that now has made him a recognized entrepreneur and pioneer of the Mayo valley, creating thousands of employments along the way and always keeping as a priority to take care of our planet.</p>
+							<p>With his innovative vision, work and commitment, he founded ALCEMA with his three sons Aldo, Cesar and Mario. Together, they have been able to develop the company to a level where our products end at the counters of the most important retailers in the US and leaving lots of work ahead to the next generation, that now are contributing in the company’s growth. </p>
+						</div>
+					</div>
+
+					<div class="col-12 my-3 d-lg-none"></div>
+
+					<div class="col-12 col-lg-4  text-center">
+						<div>
+							<img class="img-fluid  lazy" src="img/blank.gif" data-src="img/historic-photo.jpg" alt="Old photo of our founder and brother." />
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</section>
+		<!-- end section -->
+
+
+		<!-- start section -->
+		<section id="products" class="section section--gutter section--no-pb">
+			<div class="container-fluid px-md-0">
+				<!-- start product preview -->
+				<div class="product-preview product-preview--style-1">
+					<div class="__inner">
+						<div class="row">
+							<!-- start item -->
+							<div class="col-12 col-md-7 col-xl-6">
+								<div class="__item">
+									<div class="__intro-text">
+										<div class="row">
+											<div class="col-md-11">
+												<h2 class="center-xs"><span>OUR</span> PRODUCTS</h2>
+
+												<div id="our-brands">
+													<div class="our-labels center-xs">Our Labels</div>
+													<div class="row">
+														<div class="offset-md-1 col-md-5 col-xs-6">
+															<img class="img-fluid" src="img/brands/brand-bilbo.png" alt="Our Brand: Bilbo Organic" />
+														</div>
+														<div class="col-md-5 col-xs-6">
+															<img class="img-fluid" src="img/brands/brand-vyera.png" alt="Our Brand: Vyera Organic Vegetables" />
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-md-4 col-xl-3">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img/blank.gif" data-src="img/product-preview_img/broccoli.jpg" alt="Broccoli" />
+									</figure>
+
+									<div class="__content">
+										<h3 class="__title">BROCCOLI</h3>
+
+										<!-- start Calendar -->
+										<div class="produce-calendar">
+											<div class="row">
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"></div> <span>ENE</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_right"></div></div> <span>FEB</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>APR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAY</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_left"></div></div> <span>JUN</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>JUL</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>AUG</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>SEP</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>OCT</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>NOV</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>DEC</span></div>
+											</div>
+										</div>
+										<!-- end Calendar -->
+
+									</div>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-md-4 col-xl-3">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img/blank.gif" data-src="img/product-preview_img/butternut_squash.jpg" alt="Butternut Squash" />
+									</figure>
+
+									<div class="__content">
+										<h3 class="__title">BUTTERNUT SQUASH</h3>
+
+										<!-- start Calendar -->
+										<div class="produce-calendar">
+											<div class="row">
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"></div> <span>ENE</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_right"></div></div> <span>FEB</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>APR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAY</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_left"></div></div> <span>JUN</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>JUL</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>AUG</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>SEP</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>OCT</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>NOV</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>DEC</span></div>
+											</div>
+										</div>
+										<!-- end Calendar -->
+
+									</div>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-md-4 col-xl-3">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img/blank.gif" data-src="img/product-preview_img/celery.jpg" alt="Celery" />
+									</figure>
+
+									<div class="__content">
+										<h3 class="__title">CELERY</h3>
+
+										<!-- Calendar -->
+										<div class="produce-calendar">
+											<div class="row">
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"></div> <span>ENE</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_right"></div></div> <span>FEB</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>APR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAY</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_left"></div></div> <span>JUN</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>JUL</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>AUG</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>SEP</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>OCT</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>NOV</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>DEC</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-md-4 col-xl-3">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img/blank.gif" data-src="img/product-preview_img/cauliflower.jpg" alt="Cauliflower" />
+									</figure>
+
+									<div class="__content">
+										<h3 class="__title">Cauliflower</h3>
+
+										<!-- start Calendar -->
+										<div class="produce-calendar">
+											<div class="row">
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"></div> <span>ENE</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_right"></div></div> <span>FEB</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>APR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAY</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_left"></div></div> <span>JUN</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>JUL</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>AUG</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>SEP</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>OCT</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>NOV</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>DEC</span></div>
+											</div>
+										</div>
+										<!-- end Calendar -->
+
+									</div>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-md-4 col-xl-3">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img/blank.gif" data-src="img/product-preview_img/cucumber.jpg" alt="Cucumber" />
+									</figure>
+
+									<div class="__content">
+										<h3 class="__title">Cucumber</h3>
+
+										<!-- Calendar -->
+										<div class="produce-calendar">
+											<div class="row">
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"></div> <span>ENE</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_right"></div></div> <span>FEB</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>APR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAY</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_left"></div></div> <span>JUN</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>JUL</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>AUG</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>SEP</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>OCT</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>NOV</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>DEC</span></div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-md-4 col-xl-3">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img/blank.gif" data-src="img/product-preview_img/raddichio.jpg" alt="Raddichio" />
+									</figure>
+
+									<div class="__content">
+										<h3 class="__title">Raddichio</h3>
+
+										<!-- Calendar -->
+										<div class="produce-calendar">
+											<div class="row">
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"></div> <span>ENE</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_right"></div></div> <span>FEB</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>APR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAY</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_left"></div></div> <span>JUN</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>JUL</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>AUG</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>SEP</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>OCT</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>NOV</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>DEC</span></div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-md-4 col-xl-3">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img/blank.gif" data-src="img/product-preview_img/straightneck_squash.jpg" alt="Straightneck Squash" />
+									</figure>
+
+									<div class="__content">
+										<h3 class="__title">Straightneck Squash</h3>
+
+										<!-- Calendar -->
+										<div class="produce-calendar">
+											<div class="row">
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"></div> <span>ENE</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_right"></div></div> <span>FEB</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>APR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAY</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_left"></div></div> <span>JUN</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>JUL</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>AUG</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>SEP</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>OCT</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>NOV</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>DEC</span></div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- end item -->
+
+
+							<!-- start item -->
+							<div class="col-12 col-md-5 col-xl-3">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img/blank.gif" data-src="img/product-preview_img/zucchini.jpg" alt="Zucchini" />
+									</figure>
+
+									<div class="__content">
+										<h3 class="__title">Zucchini</h3>
+
+										<!-- Calendar -->
+										<div class="produce-calendar">
+											<div class="row">
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"></div> <span>ENE</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_right"></div></div> <span>FEB</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>APR</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>MAY</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__empty"><div class="produce-calendar__half_left"></div></div> <span>JUN</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>JUL</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>AUG</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>SEP</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>OCT</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>NOV</span></div>
+												<div class="col-xs-1 produce-calendar__cell"> <div class="produce-calendar__circle produce-calendar__full"></div> <span>DEC</span></div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-md-7 col-xl-6">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img/blank.gif" data-src="img/product-preview_img/wheat.jpg" alt="Wheat" />
+									</figure>
+
+									<div class="__content">
+										<h3 class="__title">WHEAT, SAFFLOWER, ALFALFA & SUNFLOWER</h3>
+									</div>
+								</div>
+							</div>
+							<!-- end item -->
+
+						</div>
+					</div>
+				</div>
+				<!-- end product preview -->
+			</div>
+		</section>
+		<!-- end section -->
+
+		<!-- start section -->
+		<section id="why-organic" class="section section--no-pb" style="padding-top: 60px;" >
+			<div class="container certs">
+				<div class="row">
+					<div class="__item offset-md-1 col-md-2 col-xs-6">
+						<img class="img-fluid" src="img/certs/usda-organic.png" alt="USDA Organic" />
+					</div>
+					<div class="__item col-md-2 col-xs-6">
+						<img class="img-fluid" src="img/certs/canada-organic.png" alt="Canada Organic" />
+					</div>
+					<div class="__item col-md-2 col-xs-6">
+						<img class="img-fluid" src="img/certs/ccof.png" alt="CCOF Certified Organic" />
+					</div>
+					<div class="__item col-md-2 col-xs-6">
+						<img class="img-fluid" src="img/certs/primus.png" alt="Primus GFS" />
+					</div>
+					<div class="__item col-md-2 offset-xs-3 col-xs-6">
+						<img class="img-fluid" src="img/certs/senasica.png" alt="Servicio Nacional de Sanidad, Inocuidad y Calidad Agroalimentaria" />
+					</div>
+				</div>
+			</div>
+
+			<div class="not-only-about">
+				<div class="container">
+					<div class="section-heading section-heading--center">
+						<span class="quote-like">Is not only about complying with the organic certification standards</span>
+						<p>Practicing regenerative organic agriculture is helping the planet to cool down and heal, creating higher-quality food, that is far more nutritious and delicious than anything our worn-out industrial farms can produce, at the same time.
+
+							<p>It includes any agricultural practice that increases soil organic matter from baseline levels and over time, provides long-term economic stability for farmers and ranchers, and creates resilient ecosystems and communities. </p>
+
+							<p>We can produce what we need and revitalize soil at the same time, thereby sequestering carbon currently polluting the atmosphere and warming our planet.</p>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<!-- end section -->
+
+
+			<!-- start section OUR TEAM -->
+			<section id="our-team" class="section section--team-bg">
+				<div class="container">
+					<div class="section-heading section-heading--center">
+						<h2 class="__title"><span>OUR </span>TEAM</h2>
+						<p class="our-team">Our great team makes possible to achieve our goals; To produce the highest quality, fulfilling the most demanding food safety standards and good agricultural practices.</p>
+					</div>
+
+					<div class="container certs">
+						<div class="row">
+							<div class="__item offset-md-3 col-md-2 col-xs-6">
+								<img class="img-fluid" src="img/certs/global-gap.png" alt="Global Gap" />
+							</div>
+							<div class="__item col-md-2 col-xs-6">
+								<img class="img-fluid" src="img/certs/smeta.png" alt="SMETA" />
+							</div>
+							<div class="__item col-md-2 offset-xs-3 col-xs-6">
+								<img class="img-fluid" src="img/certs/stps.png" alt="Secretaria del Trabajo y Prevision Social" />
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- end section -->
+
+			<section id="gallery" class="section">
+				<div class="container">
+					<div class="section-heading section-heading--center">
+						<h2 class="__title"><span>SEE OUR </span>FARM</h2>
+					</div>
+					<div class="gallery gallery--style-1">
+						<div class="__inner">
+							<div class="row  js-isotope"
+							data-isotope-options='{
+								"itemSelector": ".js-isotope__item",
+								"transitionDuration": "0.8s",
+								"percentPosition": "true",
+								"masonry": { "columnWidth": ".js-isotope__sizer" }
+							}'>
+
+							<!-- start item -->
+							<div class="col-12 col-sm-6 col-lg-4  js-isotope__item  category-1">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img//blank.gif" data-src="img/gallery_img/1.jpg" alt="demo"/>
+
+										<a class="__link" data-fancybox="gallery" href="img//gallery_img/1.jpg"></a>
+									</figure>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-sm-6 col-lg-4  js-isotope__item  category-2">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img//blank.gif" data-src="img//gallery_img/2.jpg" alt="demo"/>
+
+										<a class="__link" data-fancybox="gallery" href="img//gallery_img/2.jpg"></a>
+									</figure>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-sm-6 col-lg-4  js-isotope__item  category-3">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img//blank.gif" data-src="img//gallery_img/3.jpg" alt="demo"/>
+
+										<a class="__link" data-fancybox="gallery" href="img//gallery_img/3.jpg"></a>
+									</figure>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-sm-6 col-lg-4  js-isotope__item  category-4">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img//blank.gif" data-src="img//gallery_img/4.jpg" alt="demo"/>
+
+										<a class="__link" data-fancybox="gallery" href="img//gallery_img/4.jpg"></a>
+									</figure>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-sm-6 col-lg-4  js-isotope__item  category-5">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img//blank.gif" data-src="img//gallery_img/5.jpg" alt="demo"/>
+
+										<a class="__link" data-fancybox="gallery" href="img//gallery_img/5.jpg"></a>
+									</figure>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-sm-6 col-lg-4  js-isotope__item  category-1">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img//blank.gif" data-src="img//gallery_img/6.jpg" alt="demo"/>
+
+										<a class="__link" data-fancybox="gallery" href="img//gallery_img/6.jpg"></a>
+									</figure>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-sm-6 col-lg-4  js-isotope__item  category-2">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img//blank.gif" data-src="img//gallery_img/7.jpg" alt="demo"/>
+
+										<a class="__link" data-fancybox="gallery" href="img//gallery_img/7.jpg"></a>
+									</figure>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-sm-6 col-lg-4  js-isotope__item  category-3">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img//blank.gif" data-src="img//gallery_img/8.jpg" alt="demo"/>
+
+										<a class="__link" data-fancybox="gallery" href="img//gallery_img/8.jpg"></a>
+									</figure>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-sm-6 col-lg-4  js-isotope__item  category-4">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img//blank.gif" data-src="img//gallery_img/9.jpg" alt="demo"/>
+
+
+										<a class="__link" data-fancybox="gallery" href="img//gallery_img/9.jpg"></a>
+									</figure>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-sm-6 col-lg-4  js-isotope__item  category-2">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img//blank.gif" data-src="img//gallery_img/11.jpg" alt="demo"/>
+
+
+										<a class="__link" data-fancybox="gallery" href="img//gallery_img/11.jpg"></a>
+									</figure>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-sm-6 col-lg-4  js-isotope__item  category-4">
+								<div class="__item">
+									<figure class="__image">
+										<img class="lazy" src="img//blank.gif" data-src="img//gallery_img/12.jpg" alt="demo"/>
+
+										<a class="__link" data-fancybox="gallery" href="img//gallery_img/12.jpg"></a>
+									</figure>
+								</div>
+							</div>
+							<!-- end item -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+	<!-- end main -->
+
+	<!-- start footer -->
+	<footer id="footer" class="footer--style-2">
+		<div class="container">
+			<div class="row">
+
+				<!-- start company contacts -->
+				<div class="company-contacts  text-center">
+					<div class="__inner">
+						<div class="row justify-content-around">
+
+							<!-- start item -->
+							<div class="col-12 col-md-4 col-lg-3">
+								<div class="__item">
+									<div class="footer__item">
+										<a class="site-logo" href="index.html">
+											<img class="img-fluid  lazy" src="img/site_logo.png" data-src="img/site_logo.png" alt="Since 1920" />
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-md-4 col-lg-3">
+								<div class="__item">
+									<i class="__ico fontello-phone"></i>
+
+									<h4 class="__title">telephone</h4>
+
+									<p>
+										+01 (647) 4264130
+									</p>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-md-4 col-lg-3">
+								<div class="__item">
+									<i class="__ico fontello-mail-1"></i>
+
+									<h4 class="__title">e-mail</h4>
+
+									<p><a href="mailto:contacto@alcema.com">contacto@alcema.com</a></p>
+								</div>
+							</div>
+							<!-- end item -->
+
+							<!-- start item -->
+							<div class="col-12 col-md-4 col-lg-3">
+								<div class="__item">
+									<i class="__ico fontello-location"></i>
+
+									<h4 class="__title">location</h4>
+
+									<p>
+										Juarez 43, Centro. Huatabampo, Sonora, MX 85900
+									</p>
+								</div>
+							</div>
+							<!-- end item -->
+
+						</div>
+					</div>
+				</div>
+				<!-- end company contacts -->
+
+			</div>
+		</div>
+	</footer>
+	<!-- end footer -->
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')</script>
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
