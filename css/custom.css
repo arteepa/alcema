@@ -1,10 +1,12 @@
 /* GREEN: #0d7051 */
 
 @font-face {
-  font-family: "KaushanScript";
-  src: url(../fonts/kaushan/KaushanScript-Regular.otf);
+    font-family: 'kaushan_scriptregular';
+    src: url('../fonts/kaushan/kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('../fonts/kaushan/kaushanscript-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
-
 
 .scroll-discover-container {
   position: relative;
@@ -69,7 +71,7 @@ flex-wrap:wrap;
 .__slogan {
   font-size: 54px;
   text-align: center;
-  font-family: "KaushanScript-Regular",sans-serif;
+  font-family: "kaushan_scriptregular",sans-serif;
   font-weight: bold;
   line-height: 60px;
 }
@@ -125,7 +127,7 @@ flex-wrap:wrap;
 }
 
 .section-title {
-    font-family: "KaushanScript-Regular",sans-serif;
+    font-family: "kaushan_scriptregular",sans-serif;
     font-size: 52px;
     color: #67492c;
 }
